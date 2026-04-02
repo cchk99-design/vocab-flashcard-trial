@@ -1,7 +1,7 @@
 const categories = [
-    { id: "fruits", name: "🍎 水果系列" },
-    { id: "veggies", name: "🥦 蔬菜系列" },
-    { id: "furniture", name: "🛋️ 家具系列" }
+    { id: "fruits", name: "🍎 水果" },
+    { id: "veggies", name: "🥦 蔬菜" },
+    { id: "furniture", name: "🛋️ 家具" }
 ];
 
 // 請根據你 images/vocab/ 內的實際圖片數量修改這裡的數字

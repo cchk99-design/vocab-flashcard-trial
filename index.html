@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>識字王 - Trial Run</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="bank-screen">
+        <h1 style="color: #5D4037; margin-top: 30px;">🌟 識字王：測試啟動</h1>
+        <div class="sticky-controls">
+            <div id="selection-bar">
+                <span>已選擇：<strong id="selected-count">0</strong> 張圖片</span>
+                <button id="start-btn" class="nav-btn disabled" onclick="startSelectedGame()" disabled>進入練習 ▶️</button>
+            </div>
+        </div>
+        <div id="bank-content"></div>
+    </div>
+
+    <div id="game-screen" class="hidden">
+        <div class="header-nav">
+            <button class="back-btn" onclick="exitGame()">⬅️ 返回重選</button>
+            <div id="game-progress">1 / 1</div>
+        </div>
+        <div class="game-container">
+            <div class="display-box"><img id="current-img" src="" alt="教學圖片"></div>
+            <div class="hints-grid">
+                <div class="flip-card" onclick="toggleFlip(this)">
+                    <div class="flip-card-inner">
+                        <div class="card-front">？</div>
+                        <div class="card-back cat-bg"><img src="images/hints/hint-cat.png" class="hint-icon-img"><span class="label">類別</span></div>
+                    </div>
+                </div>
+                <div class="flip-card" onclick="toggleFlip(this)">
+                    <div class="flip-card-inner">
+                        <div class="card-front">？</div>
+                        <div class="card-back feat-bg"><img src="images/hints/hint-feat.png" class="hint-icon-img"><span class="label">特徵</span></div>
+                    </div>
+                </div>
+                <div class="flip-card" onclick="toggleFlip(this)">
+                    <div class="flip-card-inner">
+                        <div class="card-front">？</div>
+                        <div class="card-back loc-bg"><img src="images/hints/hint-loc.png" class="hint-icon-img"><span class="label">地點</span></div>
+                    </div>
+                </div>
+                <div class="flip-card" onclick="toggleFlip(this)">
+                    <div class="flip-card-inner">
+                        <div class="card-front">？</div>
+                        <div class="card-back func-bg"><img src="images/hints/hint-func.png" class="hint-icon-img"><span class="label">用途</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-nav"><button id="next-btn" class="nav-btn" onclick="nextPhoto()">下一個 ➡️</button></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

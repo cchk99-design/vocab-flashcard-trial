@@ -1,0 +1,21 @@
+body { font-family: "Microsoft JhengHei", sans-serif; background: #FFFDF0; text-align: center; margin: 0; padding: 20px; }
+.hidden { display: none; }
+.sticky-controls { position: sticky; top: 10px; background: white; padding: 15px; border-radius: 25px; border: 3px solid #FFCC00; margin: 0 auto 30px; max-width: 600px; z-index: 100; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; padding: 15px; }
+.vocab-card { background: white; border: 3px solid #FFCC00; border-radius: 15px; padding: 8px; cursor: pointer; transition: 0.3s; }
+.vocab-card.selected { border-color: #03A9F4; background: #E1F5FE; transform: translateY(-5px); }
+.vocab-card img { width: 100%; aspect-ratio: 1/1; object-fit: contain; }
+.game-container { display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap; margin-top: 20px; }
+.display-box img { width: 360px; height: 360px; background: white; border-radius: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); object-fit: contain; }
+.hints-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.flip-card { width: 130px; height: 130px; perspective: 1000px; cursor: pointer; }
+.flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; }
+.flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+.card-front, .card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.card-front { background: #F5F5F5; font-size: 2.5rem; color: #CCC; border: 2px dashed #DDD; }
+.card-back { transform: rotateY(180deg); color: white; }
+.hint-icon-img { width: 50%; height: 50%; object-fit: contain; margin-bottom: 5px; }
+.cat-bg { background: #03A9F4; } .feat-bg { background: #4CAF50; } .loc-bg { background: #FF9800; } .func-bg { background: #9C27B0; }
+.nav-btn { padding: 12px 30px; background: #FF9800; color: white; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; font-size: 1rem; }
+.nav-btn.disabled { background: #CCC; cursor: not-allowed; }
+.back-btn { padding: 8px 18px; background: #5D4037; color: white; border: none; border-radius: 50px; cursor: pointer; }
